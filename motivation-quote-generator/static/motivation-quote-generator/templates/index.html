@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Motivation Quote Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>Get Your Daily Motivation</h1>
+    <form action="/get-quote" method="post">
+        <button type="submit">Generate Quote</button>
+    </form>
+    {% if quote %}
+        <p class="quote">{{ quote }}</p>
+    {% endif %}
+</body>
+</html>
